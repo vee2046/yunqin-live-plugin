@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "list-page": "plugin://live-plugin/list-page"
+  }
+}
