@@ -42,7 +42,7 @@ module.exports = {
 ## 开放功能
 
 ### 可用页面
-- 店铺列表：`list-page`
+- 直播列表：`list-page`
 - 详情页：`details-page`
 
 **参数**
