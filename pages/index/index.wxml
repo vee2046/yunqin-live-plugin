@@ -1,5 +1,6 @@
 <!--index.wxml-->
 <view class="container">
-<navigator url="plugin://live-plugin/list-page">点击进入直播列表</navigator>
-<button bindtap="navToQunYun">test</button>
+<navigator class="btn" url="plugin://live-plugin/list-page">点击进入直播列表</navigator>
+<button  class="btn" bindtap="navToQunYun">tap方式跳转到直播列表</button>
+<navigator  class="btn" id="nav" url="plugin://live-plugin/details-page?id=78">进入直播间</navigator>
 </view>

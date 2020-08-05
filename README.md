@@ -26,10 +26,10 @@ module.exports = {
 - [开发版小程序引用开发版插件](https://developers.weixin.qq.com/miniprogram/dev/framework/plugin/development.html)
 
 ```
-//开发版1.0.3
+//开发版1.0.4
 "plugins": {
     "myPlugin": {
-      "version": "dev-17396ed8228bca688063cb7ea385e5ae",
+      "version": "dev-a75a3f66761a96c43afa4fae5a8f128c",
       "provider": "wx0ed3aa828dd719ef"
     }
 }
@@ -60,6 +60,10 @@ module.exports = {
 ### 可用功能
 
 暂无
+
+### 基础库版本兼容
+
+微信小程序：最低兼容版本为2.1.0
 
 -------------------
 ![链接](./example.jpeg)

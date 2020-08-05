@@ -1,6 +1,7 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/details/details"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -10,7 +11,7 @@
   },
   "plugins": {
     "live-plugin": {
-      "version": "dev-17396ed8228bca688063cb7ea385e5ae",
+      "version": "dev-a75a3f66761a96c43afa4fae5a8f128c",
       "provider": "wx0ed3aa828dd719ef",
       "export": "plugin.js"
     }
@@ -19,6 +20,5 @@
   "functionalPages": {
     "independent": true
   },
-  "style": "v2",
-  "sitemapLocation": "sitemap.json"
+  "style": "v2"
 }
