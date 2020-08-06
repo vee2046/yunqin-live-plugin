@@ -16,5 +16,10 @@ module.exports = {
     wx.navigateTo({
       url: 'pages/details/details',
     });
-  }
+  },
+  shareInDetails(id){
+    return {
+      title:'分享设置'+id
+    }
+  },
 }
