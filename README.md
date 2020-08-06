@@ -26,10 +26,10 @@ module.exports = {
 - [开发版小程序引用开发版插件](https://developers.weixin.qq.com/miniprogram/dev/framework/plugin/development.html)
 
 ```
-//开发版1.0.5
+//开发版1.0.6
 "plugins": {
     "myPlugin": {
-      "version": "dev-c42dd8a2eb77f9db8366afc22a9871a1",
+      "version": "dev-f8fb02ee5f6501f015e2fd00f91465e6",
       "provider": "wx0ed3aa828dd719ef"
     }
 }

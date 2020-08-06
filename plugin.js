@@ -1,6 +1,17 @@
 module.exports = {
   login: function() {
-    console.log('Hello plugin!')
+    return 472
+  },
+  pages:{
+    home  :{
+        url:'/pages/index/index',
+        openType:'reLaunch'//"navigate" | "redirect" | "switchTab" | "reLaunch"
+    },details  :{
+        url:'/pages/details/details',
+        openType:'navigate'//"navigate" | "redirect" | "switchTab" | "reLaunch"
+    },goodDetails:{
+    	url:'/pages/good/details'
+    }
   },
   gotoHome:()=>{
     console.log('gotoHome in export js file')
@@ -19,7 +30,8 @@ module.exports = {
   },
   shareInDetails(id){
     return {
-      title:'分享设置'+id
+      title:'分享设置'+id,
+
     }
   },
 }
