@@ -55,8 +55,7 @@ plugin.init({
 #### 商品详情
 
 ```
-productId//商品id
-liveId//直播间id
+dockingCode//商品对接编码
 ...自定义参数（来自添加商品时的跳转参数配置）
 ```
 
