@@ -8,7 +8,7 @@ module.exports = {
         openType:'reLaunch'//"navigate" | "redirect" | "switchTab" | "reLaunch"
     },details  :{
         url:'/pages/details/details',
-        openType:'navigate'//"navigate" | "redirect" | "switchTab" | "reLaunch"
+        openType:'redirect'//"navigate" | "redirect" | "switchTab" | "reLaunch"
     },goodDetails:{
     	url:'/pages/good/details'
     }

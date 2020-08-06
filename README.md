@@ -7,32 +7,64 @@
 [微信小程序文档](https://developers.weixin.qq.com/miniprogram/dev/framework/plugin/using.html#%E5%AF%BC%E5%87%BA%E5%88%B0%E6%8F%92%E4%BB%B6)
 
 ```
-// 使用者小程序
-module.exports = {
+// 插件初始化
+var plugin = requirePlugin("live-plugin");
+plugin.init({
   login() {
     return 'userID';//用户唯一标识
   },
-  gotoHome:()=>{},//跳转到首页
-  gotoProductDetail:(productId)=>{},//跳转到商品详情页
-  goDetails:(id)=>{},//跳转到直播详情页
+  //页面跳转配置
+  pages:{
+    //首页
+    home  :{
+        url:'/pages/index/index',
+        openType:'reLaunch'//"navigate" | "redirect" | "switchTab" | "reLaunch"
+    },
+    //直播详情页
+    details  :{
+        url:'/pages/details/details',
+        openType:'navigate'//"navigate" | "redirect" | "switchTab" | "reLaunch"
+    },
+    //商品详情页
+    goodDetails:{
+    	url:'/pages/good/details'
+    }
+  },
   shareInDetails:(id) => {//分享直播间
     return {
       //分享配置
     }
   },
-}
+});
 ```
 
 - [开发版小程序引用开发版插件](https://developers.weixin.qq.com/miniprogram/dev/framework/plugin/development.html)
 
 ```
-//开发版1.0.6
+//开发版1.0.7
 "plugins": {
     "myPlugin": {
-      "version": "dev-f8fb02ee5f6501f015e2fd00f91465e6",
+      "version": "dev-915a086da57207b30cf5c0d95423f1ab",
       "provider": "wx0ed3aa828dd719ef"
     }
 }
+```
+
+### 跳转页面时附带的参数
+
+#### 商品详情
+
+```
+productId//商品id
+liveId//直播间id
+...自定义参数（来自添加商品时的跳转参数配置）
+```
+
+#### 直播详情页
+
+```
+liveId//直播间id
+...自定义参数（来自添加商品时的跳转参数配置）
 ```
 
 **注意**
@@ -44,7 +76,7 @@ module.exports = {
 
 ### 可用页面
 - 直播列表：`list-page`
-- 详情页：`details-page`
+- 直播间：`details-page`
 
 **参数**
 

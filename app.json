@@ -11,7 +11,7 @@
   },
   "plugins": {
     "live-plugin": {
-      "version": "dev-f8fb02ee5f6501f015e2fd00f91465e6",
+      "version": "dev-915a086da57207b30cf5c0d95423f1ab",
       "provider": "wxc8ccd55af9a00972",
       "export": "plugin.js"
     }
