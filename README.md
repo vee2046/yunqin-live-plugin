@@ -44,7 +44,7 @@ plugin.init({
 //开发版1.0.9
 "plugins": {
     "myPlugin": {
-      "version": "dev-7ea481747656e7a955d502737189902d",
+      "version": "dev-2dc28b42d0c91c352a25dc67963bfc16",
       "provider": "wx0ed3aa828dd719ef"
     }
 }
