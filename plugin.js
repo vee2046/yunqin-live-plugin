@@ -1,6 +1,6 @@
 module.exports = {
   login: function() {
-    return 472
+    return 470
   },
   pages:{
     home  :{
