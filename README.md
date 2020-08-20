@@ -35,16 +35,23 @@ plugin.init({
       //分享配置
     }
   },
+  //1.0.23+
+  config:() => {
+    // 插件参数配置
+    return {
+      isDev:false//true 开发环境，false 生产环境
+    }
+  }
 });
 ```
 
 - [开发版小程序引用开发版插件](https://developers.weixin.qq.com/miniprogram/dev/framework/plugin/development.html)
 
 ```
-//开发版1.0.22
+//开发版1.0.23
 "plugins": {
     "myPlugin": {
-      "version": "dev-e2cad039f9d31ff7ee840d04e05f80cb",
+      "version": "dev-9680929c47f37bc381874139069fd23a",
       "provider": "wx0ed3aa828dd719ef"
     }
 }

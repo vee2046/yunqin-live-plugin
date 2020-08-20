@@ -34,4 +34,10 @@ module.exports = {
 
     }
   },
+  config:() => {
+    // 插件参数配置
+    return {
+      isDev:false//true 开发环境，false 生产环境
+    }
+  }
 }
