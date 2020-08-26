@@ -41,17 +41,25 @@ plugin.init({
     return {
       isDev:false//true 开发环境，false 生产环境
     }
-  }
+  },
+  //1.1.0+
+  shareCoupon(conpon){
+    // 得到优惠券信息，继续逻辑
+    console.log('触发优惠券分享',conpon);
+    return {
+      title:'分享优惠券couponId='+conpon.couponId
+    }
+  },
 });
 ```
 
 - [开发版小程序引用开发版插件](https://developers.weixin.qq.com/miniprogram/dev/framework/plugin/development.html)
 
 ```
-//开发版1.0.24
+//开发版1.1.0
 "plugins": {
     "myPlugin": {
-      "version": "dev-3eb5ea14dd3cbdaeeb5fcd361573a51f",
+      "version": "dev-311bc7f40f9675bed6ea64c759074855",
       "provider": "wx0ed3aa828dd719ef"
     }
 }
@@ -81,7 +89,6 @@ liveId//直播间id
 ## 开放功能
 
 ### 可用页面
-- 直播列表：`list-page`
 - 直播间：`details-page`
 
 **参数**
