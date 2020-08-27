@@ -30,14 +30,21 @@ module.exports = {
   // },
   shareInDetails(id){
     return {
-      title:'分享设置'+id,
+      title:'分享设置 in demo'+id,
 
     }
   },
   config:() => {
     // 插件参数配置
     return {
-      isDev:false//true 开发环境，false 生产环境
+      isDev:true//true 开发环境，false 生产环境
     }
-  }
+  },
+  shareCoupon(conpon){
+    // 得到优惠券信息，继续逻辑
+    console.log('触发优惠券分享 in demo',conpon);
+    return {
+      title:'分享优惠券 in demo couponId='+conpon.couponId
+    }
+  },
 }
