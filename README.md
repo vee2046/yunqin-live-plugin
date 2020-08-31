@@ -50,16 +50,67 @@ plugin.init({
       title:'分享优惠券couponId='+conpon.couponId
     }
   },
+  //1.1.5+
+  saveImageToPhotosAlbum(src){
+    const saveImg = (src) => {
+      wx.downloadFile({
+        url: src,
+        success(res){
+          wx.saveImageToPhotosAlbum({
+            filePath: res.tempFilePath,
+            success(){
+              wx.showToast({
+                title: '成功保存到相册',
+              })
+            }
+          })
+        }
+      })
+    };
+    wx.getSetting({
+      success(res) {
+          if (res.authSetting['scope.writePhotosAlbum']) {
+              saveImg(src);
+          } else if (res.authSetting['scope.writePhotosAlbum'] === undefined) {
+              wx.authorize({
+                  scope: 'scope.writePhotosAlbum',
+                  success() {
+                      saveImg(src);
+                  },
+                  fail(){
+                      wx.showToast({
+                          title: '您没有授权，无法保存到相册',
+                          icon: 'none'
+                      })
+                  }
+              })
+          }else {
+              wx.openSetting({
+                  success(res) {
+                      if (res.authSetting['scope.writePhotosAlbum']) {
+                          saveImg(src);
+                      }else{
+                          wx.showToast({
+                              title:'您没有授权，无法保存到相册',
+                              icon:'none'
+                          })
+                      }
+                  }
+              })
+          }
+      }
+  })
+  }
 });
 ```
 
 - [开发版小程序引用开发版插件](https://developers.weixin.qq.com/miniprogram/dev/framework/plugin/development.html)
 
 ```
-//开发版1.1.4
+//开发版1.1.5
 "plugins": {
     "myPlugin": {
-      "version": "dev-a64c19590b512cd9b7ad838fa7083980",
+      "version": "dev-6120dffcc96f7550876bd15445853a81",
       "provider": "wx0ed3aa828dd719ef"
     }
 }

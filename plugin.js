@@ -47,4 +47,55 @@ module.exports = {
       title:'分享优惠券 in demo couponId='+conpon.couponId
     }
   },
+  //1.1.5+
+  saveImageToPhotosAlbum(src){
+    const saveImg = (src) => {
+      wx.downloadFile({
+        url: src,
+        success(res){
+          wx.saveImageToPhotosAlbum({
+            filePath: res.tempFilePath,
+            success(){
+              wx.showToast({
+                title: '成功保存到相册',
+              })
+            }
+          })
+        }
+      })
+    };
+    wx.getSetting({
+      success(res) {
+          if (res.authSetting['scope.writePhotosAlbum']) {
+              saveImg(src);
+          } else if (res.authSetting['scope.writePhotosAlbum'] === undefined) {
+              wx.authorize({
+                  scope: 'scope.writePhotosAlbum',
+                  success() {
+                      saveImg(src);
+                  },
+                  fail(){
+                      wx.showToast({
+                          title: '您没有授权，无法保存到相册',
+                          icon: 'none'
+                      })
+                  }
+              })
+          }else {
+              wx.openSetting({
+                  success(res) {
+                      if (res.authSetting['scope.writePhotosAlbum']) {
+                          saveImg(src);
+                      }else{
+                          wx.showToast({
+                              title:'您没有授权，无法保存到相册',
+                              icon:'none'
+                          })
+                      }
+                  }
+              })
+          }
+      }
+  })
+  }
 }
