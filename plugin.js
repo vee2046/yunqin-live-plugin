@@ -47,6 +47,16 @@ module.exports = {
       title:'分享优惠券 in demo couponId='+conpon.couponId
     }
   },
+   /**
+   * 广告点击跳转链接
+   * @param {*} adId 广告id
+   * @param {*} liveId 直播间id
+   * 1.2.0+
+   */
+  createADPath(adId,liveId){
+    console.log('广告牌跳转url in demo',{adId,liveId});
+    return '/pages/ad/index';
+  },
   //1.1.5+
   saveImageToPhotosAlbum(src){
     const saveImg = (src) => {

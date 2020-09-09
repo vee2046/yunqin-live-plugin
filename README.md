@@ -35,20 +35,15 @@ plugin.init({
       //分享配置
     }
   },
-  //1.0.23+
-  config:() => {
-    // 插件参数配置
-    return {
-      isDev:false//true 开发环境，false 生产环境
-    }
-  },
-  //1.1.0+
-  shareCoupon(conpon){
-    // 得到优惠券信息，继续逻辑
-    console.log('触发优惠券分享',conpon);
-    return {
-      title:'分享优惠券couponId='+conpon.couponId
-    }
+  /**
+   * 广告点击跳转链接
+   * @param {*} adId 广告id
+   * @param {*} liveId 直播间id
+   * 1.2.0+
+   */
+  createADPath(adId,liveId){
+    console.log('广告牌跳转url in wxplugin',{adId,liveId});
+    return '/pages/good/details';
   },
   //1.1.5+
   saveImageToPhotosAlbum(src){
@@ -107,10 +102,10 @@ plugin.init({
 - [开发版小程序引用开发版插件](https://developers.weixin.qq.com/miniprogram/dev/framework/plugin/development.html)
 
 ```
-//开发版1.1.6
+//开发版1.2.0
 "plugins": {
     "myPlugin": {
-      "version": "dev-eb3fef124d11be33894bf2c4169bca29",
+      "version": "dev-622066809cb8bf0af209e41336675eef",
       "provider": "wx0ed3aa828dd719ef"
     }
 }
@@ -139,6 +134,8 @@ liveId//直播间id
 - 调试登录相关功能时，调试需要清除全部缓存
 
 ## 开放功能
+
+见上面使用者小程序export js示例
 
 ### 可用页面
 - 直播间：`details-page`

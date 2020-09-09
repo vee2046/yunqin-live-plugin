@@ -1,7 +1,8 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/details/details"
+    "pages/details/details",
+    "pages/ad/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -11,7 +12,7 @@
   },
   "plugins": {
     "live-plugin": {
-      "version": "dev-eb3fef124d11be33894bf2c4169bca29",
+      "version": "dev-622066809cb8bf0af209e41336675eef",
       "provider": "wxc8ccd55af9a00972",
       "export": "plugin.js"
     }
