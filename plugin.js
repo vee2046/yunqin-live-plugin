@@ -9,8 +9,6 @@ module.exports = {
     },details  :{
         url:'/pages/details/details',
         openType:'redirect'//"navigate" | "redirect" | "switchTab" | "reLaunch"
-    },goodDetails:{
-    	url:'/pages/good/details'
     }
   },
   // gotoHome:()=>{
@@ -46,6 +44,13 @@ module.exports = {
     return {
       title:'分享优惠券 in demo couponId='+conpon.couponId
     }
+  },
+  createGoodDetailsPath(dockingCode,liveId){
+    /*
+    商品详情跳转url
+    1.2.1+
+    */
+    return '/pages/good/details?dddddd=1&b=2&liveId='+liveId+'&dockingCode='+dockingCode;
   },
    /**
    * 广告点击跳转链接

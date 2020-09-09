@@ -25,15 +25,18 @@ plugin.init({
         url:'/pages/details/details',
         openType:'navigate'//"navigate" | "redirect" | "switchTab" | "reLaunch"
     },
-    //商品详情页
-    goodDetails:{
-    	url:'/pages/good/details'
-    }
   },
   shareInDetails:(id) => {//分享直播间
     return {
       //分享配置
     }
+  },
+  createGoodDetailsPath(dockingCode,liveId){
+    /*
+    商品详情跳转url
+    1.2.1+
+    */
+    return '/pages/good/details?a=1&b=2&liveId='+liveId+'&dockingCode='+dockingCode;
   },
   /**
    * 广告点击跳转链接
@@ -102,10 +105,10 @@ plugin.init({
 - [开发版小程序引用开发版插件](https://developers.weixin.qq.com/miniprogram/dev/framework/plugin/development.html)
 
 ```
-//开发版1.2.0
+//开发版1.2.1
 "plugins": {
     "myPlugin": {
-      "version": "dev-622066809cb8bf0af209e41336675eef",
+      "version": "dev-b322ba91907dd9737616fa953b6a8f55",
       "provider": "wx0ed3aa828dd719ef"
     }
 }
