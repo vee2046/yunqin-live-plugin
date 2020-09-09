@@ -34,6 +34,7 @@ plugin.init({
   createGoodDetailsPath(dockingCode,liveId){
     /*
     商品详情跳转url
+    渲染时调用，不建议函数体内包含网络请求
     1.2.1+
     */
     return '/pages/good/details?a=1&b=2&liveId='+liveId+'&dockingCode='+dockingCode;
@@ -42,6 +43,7 @@ plugin.init({
    * 广告点击跳转链接
    * @param {*} adId 广告id
    * @param {*} liveId 直播间id
+   * 渲染时调用，不建议函数体内包含网络请求
    * 1.2.0+
    */
   createADPath(adId,liveId){
