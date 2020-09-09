@@ -40,7 +40,7 @@ module.exports = {
   },
   shareCoupon(conpon){
     // 得到优惠券信息，继续逻辑
-    console.log('触发优惠券分享 in demo',conpon);
+    // console.log('触发优惠券分享 in demo',conpon);
     return {
       title:'分享优惠券 in demo couponId='+conpon.couponId
     }
