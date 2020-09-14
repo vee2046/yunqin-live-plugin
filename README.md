@@ -13,6 +13,12 @@ plugin.init({
   login() {
     return 'userID';//用户唯一标识
   },
+  config:() => {
+    // 插件参数配置
+    return {
+      isDev:true//true 开发环境，false 生产环境
+    }
+  },
   //页面跳转配置
   pages:{
     //首页
