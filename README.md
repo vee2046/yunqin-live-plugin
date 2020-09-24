@@ -113,10 +113,10 @@ plugin.init({
 - [开发版小程序引用开发版插件](https://developers.weixin.qq.com/miniprogram/dev/framework/plugin/development.html)
 
 ```
-//开发版1.2.13
+//开发版1.2.14
 "plugins": {
     "myPlugin": {
-      "version": "dev-7b8d67f3927607d8396dde47a532c557",
+      "version": "dev-b5b9a39eb3f4c3228cb74695ded79f56",
       "provider": "wx0ed3aa828dd719ef"
     }
 }

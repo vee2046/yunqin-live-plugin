@@ -12,7 +12,7 @@
   },
   "plugins": {
     "live-plugin": {
-      "version": "dev-7b8d67f3927607d8396dde47a532c557",
+      "version": "dev-b5b9a39eb3f4c3228cb74695ded79f56",
       "provider": "wxc8ccd55af9a00972",
       "export": "plugin.js"
     }
