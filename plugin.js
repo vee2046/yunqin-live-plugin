@@ -35,7 +35,7 @@ module.exports = {
   config:() => {
     // 插件参数配置
     return {
-      isDev:true//true 开发环境，false 生产环境
+      isDev:false//true 开发环境，false 生产环境
     }
   },
   shareCoupon(conpon){
