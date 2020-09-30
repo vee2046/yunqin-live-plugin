@@ -2,6 +2,6 @@
 <view class="container">
 <navigator class="btn" url="plugin://live-plugin/list-page">点击进入直播列表</navigator>
 <button  class="btn" bindtap="navToQunYun">tap方式跳转到直播列表</button>
-<navigator  class="btn" id="nav" url="plugin://live-plugin/details-page?id=122">进入直播间</navigator>
+<navigator  class="btn" id="nav" url="plugin://live-plugin/details-page?id=23">进入直播间</navigator>
 <!-- <image style="margin-top:40rpx;width:100%;height:800rpx;" src="/images/test_qygroup.jpg" mode="aspectFit"></image> -->
 </view>
